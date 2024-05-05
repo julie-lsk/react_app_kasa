@@ -1,0 +1,33 @@
+.banner
+{
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply; /* assombrit l'image de fond */
+    background-repeat: no-repeat;
+    color: white;
+    font-size: 48px;
+    font-weight: 700;
+    width: 92%;
+    height: 223px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    p
+    {
+        text-align: center;
+    }
+}
+
+.bannerAccueil
+{
+    background-image: url("../../../assets/paysage_accueil.webp");
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.bannerAPropos
+{
+    background-image: url("../../../assets/paysage_a_propos.webp");
+    background-color: rgba(0, 0, 0, 0.3);
+}

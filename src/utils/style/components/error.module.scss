@@ -1,0 +1,29 @@
+$color-red: #ff6060;
+
+.errorPage
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .error404
+    {
+        font-size: 15em;
+        font-weight: 700;
+        color: $color-red;
+    }
+
+    .errorText
+    {
+        font-size: 36px;
+        color: $color-red;
+        margin: 70px 0;
+    }
+
+    a
+    {
+        font-size: 18px;
+        margin: 30px 0;
+    }
+}

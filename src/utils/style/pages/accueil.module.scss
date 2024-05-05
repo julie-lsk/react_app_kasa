@@ -1,0 +1,23 @@
+main 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .cardContainer
+    {
+        background-color: #F6F6F6;
+        width: 85%;
+        height: 829px;
+        border-radius: 25px;
+        margin-top: 40px;
+        padding: 56px 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 50px;
+    }
+}
