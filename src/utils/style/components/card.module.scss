@@ -1,10 +1,14 @@
 .cardWrapper 
 {
-    width: 340px;
-    height: 340px;
+    width: 100%;
+    height: auto;
+    max-width: 340px; 
+    min-height: 340px;
     padding: 20px;
     border-radius: 10px;
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
     display: flex;
     align-items: end;
     align-self: flex-start;

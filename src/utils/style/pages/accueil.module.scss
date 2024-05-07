@@ -1,4 +1,4 @@
-main 
+.homeContent
 {
     display: flex;
     justify-content: center;
@@ -9,15 +9,12 @@ main
     {
         background-color: #F6F6F6;
         width: 85%;
-        height: 829px;
+        height: auto;
         border-radius: 25px;
         margin-top: 40px;
         padding: 56px 50px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(340px, calc(33.33% - 50px)));
         gap: 50px;
     }
 }

@@ -2,11 +2,18 @@ import styles from "../utils/style/components/card.module.scss";
 
 
 
-function Card({title, picture})
+function Card({title, picture, onClick})
 {
     return (
-        <div className={styles.cardWrapper} style={{backgroundImage:`url(${picture})`}}>
-            <p>{title}</p>            
+
+        /* Si l'utilisateur clique sur le composant, le détail sur le logement s'affiche (CardDeatil) */
+        <div 
+            className={styles.cardWrapper} 
+            style={{backgroundImage:`url(${picture})`}} 
+            onClick={onClick} /* onClick = prop pour ouvrir la "modale" */
+        > 
+            <p>{title}</p> 
+
         </div>
     )
 }
