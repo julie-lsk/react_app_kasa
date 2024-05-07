@@ -12,7 +12,7 @@ function Accueil()
 
             <Banner />
 
-            <section className={styles.cardContainer}> {/* TODO: style cardContainer */}
+            <section className={styles.cardContainer}>
                 {logements.map((logement) =>
                 {
                     return (

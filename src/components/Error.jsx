@@ -10,7 +10,7 @@ function Error()
 
             <p className={styles.error404}>404</p>
             <p className={styles.errorText}>Oups ! La page que vous demandez n'existe pas.</p>
-            <Link to="/accueil">Retourner sur la page d'accueil</Link>
+            <Link to="/">Retourner sur la page d'accueil</Link>
 
         </section>
     )

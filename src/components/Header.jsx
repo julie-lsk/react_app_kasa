@@ -10,12 +10,12 @@ function Header()
 
     return (
         <header>
-            <Link to="/accueil">
+            <Link to="/">
                 <img src={logo} alt="Logo de Kasa"></img>
             </Link>
 
             <nav>
-                <NavLink to="/accueil" className={location.pathname === "/accueil" ? "active" : ""}> {/* Gère soulignement */}
+                <NavLink to="/" className={location.pathname === "/" ? "active" : ""}> {/* Gère soulignement */}
                     Accueil
                 </NavLink>
 

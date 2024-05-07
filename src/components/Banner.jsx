@@ -8,11 +8,11 @@ function Banner ()
     const location = useLocation()
 
     return (
-        <div className={location.pathname === "/accueil" 
+        <div className={location.pathname === "/" 
         ?`${styles.bannerAccueil} ${styles.banner}`
         : `${styles.bannerAPropos} ${styles.banner}`}>
 
-            {location.pathname === "/accueil" ? <p>Chez vous, partout et ailleurs</p> : ""}
+            {location.pathname === "/" ? <p>Chez vous, partout et ailleurs</p> : ""}
         </div>
     )
 }

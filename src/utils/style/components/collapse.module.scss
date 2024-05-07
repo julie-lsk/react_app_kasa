@@ -1,0 +1,61 @@
+.collapseStyle
+{
+    width: 80%;
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    .collapseFlex
+    {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        border-radius: 5px;
+        background-color: #ff6060;
+    }
+
+
+    /********** Animation de la description - onglets **********/
+
+    .descriptionStyle
+    {
+        color: black;
+        font-size: 18px;
+        font-weight: 400;
+        background-color: #F6f6f6;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        padding: 0 20px; /* que sur côtés */
+        overflow: hidden; /* cache la description */
+        transition: 1s all ease; /* transitions sur changmts hauteur + padding (top/bottom) */
+    }
+
+    .descriptionVisible 
+    {
+        max-height: 500px;  
+        padding: 20px;  
+    }
+    
+    .descriptionHidden 
+    {
+        max-height: 0;
+    }
+}
+
+
+
+/********** Animation de la flèche **********/
+.arrowIcon 
+{
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Animation fluide */
+}
+
+.rotate 
+{
+    transform: rotate(180deg);
+}
