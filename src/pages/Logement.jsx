@@ -61,13 +61,13 @@ function Logement()
 
     /********** Infos sur le logement sélectionné **********/
     return (
-        <main>
+        <main className={styles.logementPage}>
 
             <Slideshow data={logement} />
 
             <section className={styles.infosWrapper}>
 
-                <div className={styles.logementInfos}>
+                <div className={styles.logementInfos}> {/* FIXME: class utile ou pas */}
 
                     <h1 className={styles.title}>{logement.title}</h1>
                     <h2 className={styles.location}>{logement.location}</h2>
@@ -83,14 +83,16 @@ function Logement()
 
                 <div className={styles.hostInfos}>
 
-                    <p className={styles.hostName}>{logement.host.name}</p>
+                    <div className={styles.hostWrapper}>
+                        <p>{logement.host.name}</p>
 
-                    <img 
-                        src={logement.host.picture} 
-                        alt={`Hôte de la location : ${logement.host.name}`}>
-                    </img>
+                        <img 
+                            src={logement.host.picture} 
+                            alt={`Hôte de la location : ${logement.host.name}`}>
+                        </img>
+                    </div>
 
-                    {stars} {/* note sur 5 de l'hôte */}
+                    <span>{stars}</span> {/* note sur 5 de l'hôte */}
 
                 </div>
 
@@ -98,12 +100,15 @@ function Logement()
 
             <section className={styles.collapseWrapper}>
 
-                
-
                 <Collapse title="Description" description={logement.description} />
-                <Collapse title="Équipements" description={logement.equipments.map((equipment, index) => {
-                    return <li key={index}>{equipment}</li>
-                })} />
+
+                <Collapse 
+                    title="Équipements" 
+                    description={logement.equipments.map((equipment, index) => 
+                    {
+                        return <li key={index} className={styles.liCollapse}>{equipment}</li>
+                    })}
+                />
 
             </section>
 

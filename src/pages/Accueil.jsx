@@ -8,7 +8,7 @@ import logements from "../data/logements.json";
 function Accueil()
 {
     return (
-        <main>
+        <main >
 
             <div className={styles.homeContent}>
 
