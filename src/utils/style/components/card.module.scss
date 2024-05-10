@@ -4,6 +4,7 @@
     height: auto;
     max-width: 340px; 
     min-height: 340px;
+    box-sizing: border-box;
     padding: 20px;
     border-radius: 10px;
     background-size: cover;
@@ -26,4 +27,12 @@
         color: white;
         text-shadow: 0.15em 0 1em #000000;
     }
+}
+
+.link
+{
+    width: 100%;
+    height: auto;
+    max-width: 340px; 
+    min-height: 340px;
 }

@@ -1,50 +1,36 @@
-import { useState } from "react";
+import { Link } from "react-router-dom";
 import styles from "../utils/style/pages/accueil.module.scss";
 import Card from "../components/Card";
 import Banner from "../components/Banner";
-import CardDetail from "../components/logements_details/CardDetail";
-import logements from "../data/logements.json";
+import logements from "../data/logements.json";;
 
 
 
 function Accueil()
 {
-    const [isCardDetailOpen, setIsCardDetailOpen] = useState(false);
-
-    // Fonction pour ouvrir le CardDetail
-    const handleCardClick = () => 
-    {
-        setIsCardDetailOpen(true);
-    };
-
     return (
         <main>
 
-            {/* La modale est affichée si l'utilisateur clique sur un logement */}
-            {isCardDetailOpen ? 
-            (
-                <CardDetail />
-            ) :
+            <div className={styles.homeContent}>
 
-            ( /* Tant que l'utilisateur n'a pas cliqué sur une image, la galerie est affichée */
-                <div className={styles.homeContent}>
-                    <Banner />
+                <Banner />
 
-                    <section className={styles.cardContainer}>
-                        {logements.map((logement) =>
-                        {
-                            return (
-                                <Card 
-                                    key={`${logement.id}`}
-                                    title={logement.title}
-                                    picture={logement.cover}
-                                    onClick={handleCardClick} /* voir Card pour détail (prop onClick) */
-                                />
-                            )
-                        })}
-                    </section>
-                </div>
-            )} 
+                <section className={styles.cardContainer}>
+                    {logements.map((logement) =>
+                    {
+                        return (
+                            <Card 
+                                key={`${logement.id}`}
+                                id={logement.id}
+                                title={logement.title}
+                                picture={logement.cover}
+                            />
+                        )
+                    })}
+                </section>
+
+            </div>
+
         </main>
     )
 }
