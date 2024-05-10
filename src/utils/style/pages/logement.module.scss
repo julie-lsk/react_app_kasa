@@ -1,4 +1,17 @@
-section 
+main 
 {
-    margin-top: 50px
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin: auto;
+    width: 85%;
+    min-height: 71vh;
+
+    .stars
+    {
+        width: 20px;
+        height: 20px;
+    }
 }

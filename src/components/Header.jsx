@@ -15,7 +15,7 @@ function Header()
             </Link>
 
             <nav>
-                <NavLink to="/" className={location.pathname === "/" ? "active" : ""}> {/* Gère soulignement */}
+                <NavLink to="/" className={location.pathname === "/" ? "active" : ""}> {/* "active" gère soulignement */}
                     Accueil
                 </NavLink>
 

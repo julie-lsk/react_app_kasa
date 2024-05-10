@@ -1,15 +1,67 @@
-import styles from "../utils/style/components/slideshow.module.scss"
-import logements from "../data/logements.json";
+import styles from "../utils/style/components/slideshow.module.scss";
+import { useState } from "react";
 
 
-function Slideshow({data})
+/********** Carousel d'images **********/
+
+function Slideshow({data}) /* data = objet JSON du logement sélectionné */
 {
+    const [slide, setSlide] = useState(0);
+
+
+    const nextSlide = () => {
+        setSlide(slide === data.pictures.length - 1 ? 0 : slide + 1);
+    };
+
+    const prevSlide = () => {
+        setSlide(slide === 0 ? data.pictures.length - 1 : slide - 1)
+    };
+
+
     return (
-        <div>
+        <div className={styles.carousel}>
+
+            <button /* flèche gauche */
+                className={`${styles.arrowLeft} ${styles.arrow}`}
+                onClick={prevSlide}>
+            </button>
+
+
+            {/* Renvoi la liste des images du logement sélectionné sur page d'accueil */}
             {data.pictures.map((item, index) =>
             {
-                return <img src={item} alt={data.description} key={`${data.id}-${index}`}></img>
+                return (
+                    <img 
+                        src={item} /* URL */
+                        alt={data.description} 
+                        key={`${data.id}-${index}`}
+                        className={slide === index ? `${styles.slide}` : `${styles.slide} ${styles.slideHidden}`}>
+                    </img>
+                )
             })}
+
+
+            <button /* flèche droite */
+                className={`${styles.arrowRight} ${styles.arrow}`}
+                onClick={nextSlide}>
+
+            </button>
+
+
+            {/* Boutons d'indications sous image */}
+            <span className={styles.indicators}>
+                {data.pictures.map((_, index) =>
+                {
+                    return (
+                        <button 
+                            key={index} 
+                            onClick={() => setSlide(index)}
+                            className={slide === index ? `${styles.indicator}` : `${styles.indicator} ${styles.indicatorInactive}`}>
+                        </button>
+                    )
+                })}
+            </span>
+
         </div>
     )
 }

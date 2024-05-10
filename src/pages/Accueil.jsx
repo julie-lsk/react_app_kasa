@@ -1,8 +1,7 @@
-import { Link } from "react-router-dom";
 import styles from "../utils/style/pages/accueil.module.scss";
 import Card from "../components/Card";
 import Banner from "../components/Banner";
-import logements from "../data/logements.json";;
+import logements from "../data/logements.json";
 
 
 
