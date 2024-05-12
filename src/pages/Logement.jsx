@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import styles from "../utils/style/pages/logement.module.scss";
-import starRed from "../assets/star_red.svg";
-import starGrey from "../assets/star_grey.svg";
+import starRed from "../utils/assets/star_red.svg";
+import starGrey from "../utils/assets/star_grey.svg";
 import Slideshow from "../components/Slideshow";
 import Error from "../components/Error";
 import logements from "../data/logements.json";

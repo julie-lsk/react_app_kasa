@@ -58,7 +58,7 @@
     .arrowLeft
     {
         left: 20px;
-        background-image: url(../../../assets/carousel_arrow_left.svg);
+        background-image: url(../../../utils/assets/carousel_arrow_left.svg);
         
         @media (max-width: 1000px)
         {
@@ -76,7 +76,7 @@
     .arrowRight
     {
         right: 20px;
-        background-image: url(../../../assets/carousel_arrow_right.svg);
+        background-image: url(../../../utils/assets/carousel_arrow_right.svg);
 
         @media (max-width: 1000px)
         {

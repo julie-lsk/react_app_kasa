@@ -1,5 +1,5 @@
 import { useState } from "react";
-import arrow from "../assets/arrow.svg";
+import arrow from "../utils/assets/arrow.svg";
 import styles from "../utils/style/components/collapse.module.scss";
 
 

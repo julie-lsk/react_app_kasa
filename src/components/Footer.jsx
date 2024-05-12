@@ -1,4 +1,4 @@
-import logoWhite from "../assets/logo_white.svg";
+import logoWhite from "../utils/assets/logo_white.svg";
 import styles from "../utils/style/components/footer.module.scss"
 
 

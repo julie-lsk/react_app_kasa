@@ -1,5 +1,5 @@
 import { Link, NavLink, useLocation } from "react-router-dom";
-import logo from "../assets/logo.svg";
+import logo from "../utils/assets/logo.svg";
 import "../utils/style/components/header.scss";
 
 
