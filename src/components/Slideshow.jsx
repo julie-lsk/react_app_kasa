@@ -21,10 +21,11 @@ function Slideshow({data}) /* data = objet JSON du logement sélectionné */
     return (
         <div className={styles.carousel}>
 
+            {data.pictures.length === 1 ? "" : /* s'il n'y a qu'une seule image, on n'affiche pas la flèche */
             <button /* flèche gauche */
                 className={`${styles.arrowLeft} ${styles.arrow}`}
                 onClick={prevSlide}>
-            </button>
+            </button>}
 
 
             {/* Renvoi la liste des images du logement sélectionné sur page d'accueil */}
@@ -40,15 +41,15 @@ function Slideshow({data}) /* data = objet JSON du logement sélectionné */
                 )
             })}
 
-
+            {data.pictures.length === 1 ? "" : 
             <button /* flèche droite */
                 className={`${styles.arrowRight} ${styles.arrow}`}
                 onClick={nextSlide}>
-
-            </button>
+            </button>}
 
 
             {/* Boutons d'indications sous image */}
+            {data.pictures.length === 1 ? "" :
             <span className={styles.indicators}>
                 {data.pictures.map((_, index) =>
                 {
@@ -60,7 +61,7 @@ function Slideshow({data}) /* data = objet JSON du logement sélectionné */
                         </button>
                     )
                 })}
-            </span>
+            </span>}
 
         </div>
     )

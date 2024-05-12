@@ -1,6 +1,12 @@
 main 
 {
+    display: flex;
+    flex-direction: column;
     justify-content: flex-start;
+    align-items: center;
+
+
+    
 
     .collapseWrapper
     {
@@ -12,6 +18,11 @@ main
         margin-top: 50px;
         margin-bottom: 50px;
         width: 95%;
+
+        @media (max-width: 600px)
+        {
+            width: 86%;
+        }
     }
 }
 

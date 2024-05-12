@@ -8,6 +8,19 @@
     flex-direction: column;
     position: relative;
 
+    @media (max-width: 1000px)
+    {
+        font-size: 19px;
+        letter-spacing: 1px;
+    }
+
+    @media (max-width: 600px)
+    {
+        width: 100%;
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+
     .collapseFlex
     {
         display: flex;
@@ -32,12 +45,24 @@
         padding: 0 20px; /* que sur côtés */
         overflow: hidden; /* cache la description */
         transition: 1s all ease; /* transitions sur changmts hauteur + padding (top/bottom) */
+
+        @media (max-width: 1000px)
+        {
+            font-size: 15px;
+        }
+
+        @media (max-width: 600px)
+        {
+            font-size: 13px;
+            letter-spacing: 1px;
+            padding: 0 10px;
+        }
     }
 
     .descriptionVisible 
     {
         max-height: 500px;  
-        padding: 20px;  
+        padding: 10px;  
     }
     
     .descriptionHidden 
@@ -53,6 +78,12 @@
 {
     cursor: pointer;
     transition: transform 0.3s ease; /* Animation fluide */
+
+    @media (max-width: 600px)
+    {
+        width: 25px;
+        height: 25px;
+    }
 }
 
 .rotate 

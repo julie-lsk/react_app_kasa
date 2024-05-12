@@ -15,6 +15,12 @@
         max-height: 415px;
         object-fit: cover;
         border-radius: 25px;
+
+        @media (max-width: 600px)
+        {
+            min-height: 255px;
+            border-radius: 10px;
+        }
     }
 
     .slideHidden
@@ -34,18 +40,55 @@
         {
             cursor: pointer;
         }
+
+        @media (max-width: 1000px)
+        {
+            background-size: 37px;
+            background-position: center;
+        }
+
+        @media (max-width: 600px)
+        {
+            background-size: 24px;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
     }
 
     .arrowLeft
     {
         left: 20px;
         background-image: url(../../../assets/carousel_arrow_left.svg);
+        
+        @media (max-width: 1000px)
+        {
+            width: 37px;
+            height: 40px;
+        }
+
+        @media (max-width: 600px)
+        {
+            width: 24px;
+            height: 24px;
+        }
     }
 
     .arrowRight
     {
         right: 20px;
         background-image: url(../../../assets/carousel_arrow_right.svg);
+
+        @media (max-width: 1000px)
+        {
+            width: 34px;
+            height: 40px;
+        }
+
+        @media (max-width: 600px)
+        {
+            width: 24px;
+            height: 24px;
+        }
     }
 
     .indicators

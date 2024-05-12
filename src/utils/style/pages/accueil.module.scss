@@ -14,8 +14,25 @@
         margin-top: 40px;
         padding: 56px 50px;
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(340px, calc(33.33% - 50px)));
         place-items: center;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
         gap: 50px;
+
+        @media (max-width: 1000px)
+        {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            padding: 50px 30px;
+        }
+
+        @media (max-width: 600px)
+        {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            background-color: transparent;
+            gap: 20px;
+            padding: 0;
+        }
     }
 }
