@@ -62,7 +62,7 @@
     .descriptionVisible 
     {
         max-height: 500px;  
-        padding: 20px; 
+        padding: 20px; /* ajoute padding partout (effet hauteur) */
         
         @media (max-width: 600px)
         {

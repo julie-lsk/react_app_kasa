@@ -56,7 +56,7 @@ function Logement()
     }
 
     /* Création d'une variable car appel de variable impossible dans return */
-    const stars = generateStars(parseInt(logement.rating));
+    const stars = generateStars(parseInt(logement.rating)); /* parseInt = string to integer */
 
 
     /********** Infos sur le logement sélectionné **********/
@@ -67,7 +67,7 @@ function Logement()
 
             <section className={styles.infosWrapper}>
 
-                <div className={styles.logementInfos}> {/* FIXME: class utile ou pas */}
+                <div className={styles.logementInfos}> 
 
                     <h1 className={styles.title}>{logement.title}</h1>
                     <h2 className={styles.location}>{logement.location}</h2>
@@ -103,7 +103,7 @@ function Logement()
                 <Collapse title="Description" description={logement.description} />
 
                 <Collapse 
-                    title="Équipements" 
+                    title="Équipements"
                     description={logement.equipments.map((equipment, index) => 
                     {
                         return <li key={index} className={styles.liCollapse}>{equipment}</li>

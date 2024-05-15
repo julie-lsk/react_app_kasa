@@ -17,13 +17,12 @@ function Collapse ({title, description}) /* Paramètres à préciser lors de l'a
                 <p>{title}</p>
 
                 <img src={arrow} 
-                    onClick={() => setIsVisible(!isVisible)}
+                    onClick={() => setIsVisible(!isVisible)} /* par défaut fermé */
                     className={`${styles.arrowIcon} ${isVisible ? styles.rotate : ""}`}
                     alt={isVisible ? "Flèche de fermeture de l'onglet" : "Flèche d'ouverture de l'onglet"} >
                 </img>
 
             </div>
-
 
 
             {

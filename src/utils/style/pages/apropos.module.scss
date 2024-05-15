@@ -1,12 +1,14 @@
-main 
+.mainAPropos 
 {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
 
-
-    
+    @media (max-width: 600px)
+    {
+        min-height: 75vh;
+    }
 
     .collapseWrapper
     {

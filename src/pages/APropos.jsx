@@ -7,7 +7,7 @@ import Collapse from "../components/Collapse";
 function APropos()
 {
     return (
-        <main>
+        <main className={styles.mainAPropos}>
 
             <Banner />
 

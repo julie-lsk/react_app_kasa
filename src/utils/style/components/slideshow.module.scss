@@ -13,12 +13,14 @@
         width: 100%;
         height: auto;
         max-height: 415px;
+        min-height: 415px;
         object-fit: cover;
         border-radius: 25px;
 
         @media (max-width: 600px)
         {
             min-height: 255px;
+            max-height: 255px;
             border-radius: 10px;
         }
     }

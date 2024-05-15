@@ -9,7 +9,7 @@ function Card({id, title, picture})
     return (
         <Link to={`/logement/${id}`} className={styles.link}>
 
-            <div className={styles.cardWrapper}style={{backgroundImage:`url(${picture})`}}>
+            <div className={styles.cardWrapper} style={{backgroundImage:`url(${picture})`}}>
 
                 <p>{title}</p>
 
