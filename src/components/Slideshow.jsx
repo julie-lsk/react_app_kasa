@@ -48,20 +48,14 @@ function Slideshow({data}) /* data = objet JSON du logement sélectionné */
             </button>}
 
 
-            {/* Boutons d'indications sous image */}
+            {/* Indicateur sous image */}
             {data.pictures.length === 1 ? "" :
-            <span className={styles.indicators}>
-                {data.pictures.map((_, index) =>
-                {
-                    return (
-                        <button 
-                            key={index} 
-                            onClick={() => setSlide(index)}
-                            className={slide === index ? `${styles.indicator}` : `${styles.indicator} ${styles.indicatorInactive}`}>
-                        </button>
-                    )
-                })}
-            </span>}
+                data.pictures.length > 1 && (
+                    <span className={styles.indicators}>
+                        {slide + 1}/{data.pictures.length}
+                    </span>
+                )
+            }
 
         </div>
     )

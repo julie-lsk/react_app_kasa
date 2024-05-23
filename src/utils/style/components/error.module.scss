@@ -8,6 +8,11 @@ $color-red: #ff6060;
     align-items: center;
     min-height: 71vh;
 
+    @media (max-width: 600px)
+        {
+            min-height: 75vh;
+        }
+
     .error404
     {
         font-size: 15em;
@@ -31,6 +36,8 @@ $color-red: #ff6060;
         color: $color-red;
         margin: 70px 0;
         text-align: center;
+        padding-left: 25px;
+        padding-right: 25px;
 
         @media (max-width: 1000px)
         {

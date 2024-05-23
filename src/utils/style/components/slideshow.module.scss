@@ -98,23 +98,12 @@
         display: flex;
         position: absolute;
         bottom : 1rem;
-    }
+        color: white;
+        font-size: 18px;
 
-    .indicator
-    {
-        background-color: white;
-        height: 0.75rem;
-        width: 0.75rem;
-        border-radius: 100%;
-        border: none;
-        outline: none;
-        box-shadow: 0 0 5px #555;
-        margin: 0 0.2rem;
-        cursor: pointer;
-    }
-
-    .indicatorInactive
-    {
-        background-color: grey;
+        @media (max-width: 600px)
+        {
+            display: none;
+        }
     }
 }
